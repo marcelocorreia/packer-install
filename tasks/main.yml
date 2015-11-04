@@ -1,0 +1,19 @@
+---
+- name: Downloads Hashicorp's packer
+  get_url: >
+    url="{{ install.download_location }}/{{ packer.version }}/packer_{{ packer.version }}_linux_{{ packer.arch }}.zip"
+    dest="/tmp/"
+    mode=0755
+  sudo: no
+  tags:
+    - hashicorp
+    - packer
+    - install
+
+- name: Installs Hashicorp's packer
+  shell: unzip -u -d {{ install.dir }} /tmp/packer_{{ packer.version }}_linux_{{ packer.arch }}.zip ; chmod 770 {{ install.dir }}/packer* ; chown root:staff {{ install.dir }}/packer
+  sudo: yes
+  tags:
+    - hashicorp
+    - packer
+    - install
