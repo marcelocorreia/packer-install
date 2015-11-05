@@ -1,8 +1,50 @@
 ---
-packer:
+app:
+  name: packer
   version: 0.8.6
-  arch: amd64
+  arch: linux_amd64
+  file_group: vagrant
 
 install:
   dir : /usr/local/bin
-  download_location: https://releases.hashicorp.com/packer
+  download_location: https://releases.hashicorp.com/terraform
+  file_list:
+    - packer
+    - packer-builder-parallels-iso
+    - packer-post-processor-docker-import
+    - packer-provisioner-file
+    - packer-builder-amazon-chroot
+    - packer-builder-parallels-pvm
+    - packer-post-processor-docker-push
+    - packer-provisioner-powershell
+    - packer-builder-amazon-ebs
+    - packer-builder-qemu
+    - packer-post-processor-docker-save
+    - packer-provisioner-puppet-masterless
+    - packer-builder-amazon-instance
+    - packer-builder-virtualbox-iso
+    - packer-post-processor-docker-tag
+    - packer-provisioner-puppet-server
+    - packer-builder-digitalocean
+    - packer-builder-virtualbox-ovf
+    - packer-post-processor-vagrant
+    - packer-provisioner-salt-masterless
+    - packer-builder-docker
+    - packer-builder-vmware-iso
+    - packer-post-processor-vagrant-cloud
+    - packer-provisioner-shell
+    - packer-builder-file
+    - packer-builder-vmware-vmx
+    - packer-post-processor-vsphere
+    - packer-provisioner-shell-local
+    - packer-builder-googlecompute
+    - packer-post-processor-artifice
+    - packer-provisioner-ansible-local
+    - packer-provisioner-windows-restart
+    - packer-builder-null
+    - packer-post-processor-atlas
+    - packer-provisioner-chef-client
+    - packer-provisioner-windows-shell
+    - packer-builder-openstack
+    - packer-post-processor-compress
+    - packer-provisioner-chef-solo
