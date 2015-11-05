@@ -2,12 +2,10 @@
 app:
   name: packer
   version: 0.8.6
-  arch: linux_amd64
-  file_group: vagrant
 
 install:
   dir : /usr/local/bin
-  download_location: https://releases.hashicorp.com/terraform
+  download_location: https://releases.hashicorp.com/packer
   file_list:
     - packer
     - packer-builder-parallels-iso
